@@ -1,0 +1,9 @@
+{
+  "name": "Redis Database App for Predix Edge",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "local-setup": "https://github.com/PredixDev/local-setup#develop"
+  },
+  "author": "Digital PEAS"
+}
