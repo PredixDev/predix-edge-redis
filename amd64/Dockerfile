@@ -5,7 +5,7 @@ LABEL hub="https://hub.docker.com"
 LABEL org="https://hub.docker.com/u/predixadoption"
 LABEL repo="predix-edge-redis"
 LABEL imagename="predix-edge-redis-amd64"
-LABEL version="1.0.2"
+LABEL version="1.0.3"
 LABEL support="https://forum.predix.io"
 LABEL license="https://github.com/PredixDev/predix-docker-samples/blob/master/LICENSE.md"
 
