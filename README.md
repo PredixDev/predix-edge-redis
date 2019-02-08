@@ -2,7 +2,7 @@
 The intent of this app is to allow users to install a Redis Database on the Predix Edge device, allowing Redis database functionality on the Predix Edge with the ability to read, write, and edit data from an external host.
 
 ## Download and Installation
-The predix-edge-redis can be directly downloaded (from DTR: dtr.predix.io/predix-edge/predix-edge-redis) and deployed to your Predix Edge device through PETC or Edge Manager.  Predix Edge will create the data folders, mount them, and start the Redis Docker container.  After downloading and deploying, the status of the Redis app will go to “Running”.
+The predix-edge-redis can be directly downloaded (from artifactory: dtr.predix.io/predix-edge/predix-edge-redis) and deployed to your Predix Edge device through PETC or Edge Manager.  Predix Edge will create the data folders, mount them, and start the Redis Docker container.  After downloading and deploying, the status of the Redis app will go to “Running”.
 
 ## Use and Database Access
 To connect to your Predix Edge Redis DB, you’ll need to download and install the redis-cli client on your host or external computer.  Download and installation instructions can be found on Redis website (https://redislabs.com/).  Depending on your operating system, installing the redis-cli is different.
