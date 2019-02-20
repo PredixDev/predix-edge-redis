@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  redis:
-    image: predix-edge-redis-arm32:1.0.5
+  predix-edge-redis:
+    image: "predixadoption/predix-edge-redis-amd64:1.0.5"
     stdin_open: true
     tty: true
     healthcheck:
