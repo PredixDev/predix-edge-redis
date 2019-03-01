@@ -1,9 +1,11 @@
 version: '3'
 
 services:
-  redis:
-    image: predix-edge-redis-arm32:latest
+  predix-edge-redis:
+    image: "predixedge/predix-edge-redis-amd64:1.0.8"
     stdin_open: true
+    ports:
+      - "6379:6379"
     tty: true
     healthcheck:
       timeout: 5s

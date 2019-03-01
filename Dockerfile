@@ -1,12 +1,14 @@
-FROM arm32v6/alpine:3.8
+FROM alpine:3.8
 
 LABEL maintainer="Predix Edge Application Services Team"
 LABEL hub="https://hub.docker.com"
-LABEL org="https://hub.docker.com/u/predixadoption"
+LABEL org="https://hub.docker.com/u/predixedge"
 LABEL repo="predix-edge-redis"
-LABEL version="1.0.6"
+LABEL imagename="predix-edge-redis-amd64"
+LABEL version="1.0.8"
 LABEL support="https://forum.predix.io"
 LABEL license="https://github.com/PredixDev/predix-docker-samples/blob/master/LICENSE.md"
+
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN addgroup -S redis && adduser -S -G redis redis
@@ -16,7 +18,6 @@ RUN apk add --no-cache \
 		'su-exec>=0.2' \
 # add tzdata for https://github.com/docker-library/redis/issues/138
 		tzdata
-
 
 
 ENV REDIS_VERSION 5.0.3
@@ -71,7 +72,7 @@ RUN set -ex; \
 #VOLUME /data
 WORKDIR /data
 
-COPY docker-entrypoint.sh /usr/local/bin/
+COPY scripts/docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 6379
