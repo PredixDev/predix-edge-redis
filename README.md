@@ -14,6 +14,7 @@ Clone this repository to download all of the source code.
 ```bash
 git clone https://github.com/PredixDev/predix-edge-redis-amd64.git
 ```
+
 #### Create a Docker image of the App
 You can build the redis container locally using the commands below
 
@@ -23,12 +24,13 @@ The [Dockerfile](https://docs.docker.com/engine/reference/builder/) is used to c
 The *docker build* command is used to generate the docker image from the source code of your app.  Executing this command from the commandline will create a Docker image named **my-java-edge-app** with a version of **1.0.0**.
 
 ```bash
-docker build --no-cache -t predix-edge-redis:latest .
+docker build --no-cache -t predixedge/predix-edge-redis:<latest-tag-version-here> .
 ```
+
 If your build machine is behind a proxy you will need to specify the proxies as build arguments.  You can pull in the proxy values from the environment variables on your machine.
 
 ```bash
-docker build --no-cache -t predix-edge-redis:latest . --build-arg http_proxy=$http_proxy --build-arg https_proxy=$https_proxy
+docker build --no-cache -t predix-edge-redis:latest . --build-arg http_proxy=$http_proxy --build-arg https_proxy=$https_proxy -t predixedge/predix-edge-redis:<latest-tag-version-here> .
 ```
 
 After the build completes you can see your image, as well as the core Predix Edge images we pulled onto your machine with the *docker images* command.
